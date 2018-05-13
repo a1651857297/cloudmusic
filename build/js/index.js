@@ -1,0 +1,1 @@
+function render(n){var a="";n.forEach(function(n,r){a+='<div class="swiper-slide"><img src="'+n.url+'" alt=""></div>'}),$(".swiper-wrapper").html(a);new Swiper(".swiper-container",{autoplay:2e3,pagination:".swiper-pagination"})}$.ajax({url:"/api/data",dataType:"json",success:function(n){console.log(n),render(n)},error:function(n){console.warn(n)}});
